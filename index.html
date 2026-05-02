@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>한상설 | 방위사업 전문 교수 · AI 컨설턴트</title>
+<meta name="description" content="방위사업청 핵심 부서 과장 출신 공공조달 전문가. 국방 공공조달의 깊은 경륜과 AI를 결합해 새로운 가치를 창출합니다." />
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: {
+            950: '#06132E',
+            900: '#0A1F44',
+            800: '#122A57',
+            700: '#1B3A6E',
+            500: '#3A5C95',
+          },
+          ivory: '#F8F5EE',
+          paper: '#F2EDE2',
+          gold: {
+            DEFAULT: '#B8923D',
+            light: '#D4B26B',
+            dark: '#8C6E2C',
+          },
+          ink: '#1A1A1A',
+        },
+        fontFamily: {
+          serif: ['"Noto Serif KR"', 'serif'],
+          display: ['"Cormorant Garamond"', '"Noto Serif KR"', 'serif'],
+          sans: ['Pretendard', '-apple-system', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background-color: #F8F5EE;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .paper-texture {
+    background-color: #F8F5EE;
+    background-image:
+      radial-gradient(rgba(10,31,68,0.025) 1px, transparent 1px),
+      radial-gradient(rgba(184,146,61,0.018) 1px, transparent 1px);
+    background-size: 22px 22px, 38px 38px;
+    background-position: 0 0, 11px 19px;
+  }
+
+  .hairline { border-color: rgba(10,31,68,0.18); }
+  .hairline-gold { border-color: rgba(184,146,61,0.45); }
+
+  .vertical-label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.4em;
+  }
+
+  .serif-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .dotted-divide {
+    background-image: linear-gradient(to right, rgba(10,31,68,0.4) 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 6px 1px;
+    background-repeat: repeat-x;
+  }
+
+  .tab-btn { transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); position: relative; }
+  .tab-btn.active { color: #0A1F44; }
+  .tab-btn .underline-deco {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #B8923D;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .tab-btn.active .underline-deco { transform: scaleX(1); }
+  .tab-btn:hover { color: #0A1F44; }
+
+  .tab-panel { display: none; animation: fadeUp 0.5s ease-out; }
+  .tab-panel.active { display: block; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes drawLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+  .reveal { animation: slideUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  .reveal-1 { animation-delay: 0.05s; }
+  .reveal-2 { animation-delay: 0.18s; }
+  .reveal-3 { animation-delay: 0.32s; }
+  .reveal-4 { animation-delay: 0.46s; }
+  .reveal-5 { animation-delay: 0.6s; }
+
+  .draw-line {
+    transform-origin: left center;
+    animation: drawLine 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s both;
+  }
+
+  /* 프로필 이미지 영역 */
+  .portrait-frame {
+    position: relative;
+    background:
+      linear-gradient(135deg, #0A1F44 0%, #122A57 40%, #1B3A6E 100%);
+    overflow: hidden;
+  }
+  .portrait-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 20%, rgba(184,146,61,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 90%, rgba(58,92,149,0.3) 0%, transparent 55%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .portrait-frame::after {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(184,146,61,0.5);
+    pointer-events: none;
+    z-index: 3;
+  }
+  .portrait-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(1.0) contrast(1.02) saturate(1.05);
+    z-index: 1;
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .portrait-frame:hover .portrait-img { transform: scale(1.03); }
+
+  .portrait-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    color: rgba(248,245,238,0.85);
+  }
+
+  .credential-card {
+    background: #FBFAF5;
+    border: 1px solid rgba(10,31,68,0.12);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+  }
+  .credential-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px;
+    height: 100%;
+    background: #B8923D;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .credential-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px -16px rgba(10,31,68,0.18);
+    border-color: rgba(10,31,68,0.22);
+  }
+  .credential-card:hover::before { transform: scaleY(1); }
+
+  .meta-label {
+    font-family: 'Pretendard', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #B8923D;
+  }
+
+  .seal {
+    width: 64px; height: 64px;
+    border: 1.5px solid #B8923D;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif KR', serif;
+    color: #B8923D;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    position: relative;
+  }
+  .seal::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(184,146,61,0.4);
+    border-radius: 50%;
+  }
+
+  .contact-link { transition: all 0.3s ease; }
+  .contact-link:hover { color: #B8923D; transform: translateX(2px); }
+
+  .display-xl {
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  /* 타임라인 스타일 */
+  .timeline-item {
+    position: relative;
+    padding-left: 2.2rem;
+    padding-bottom: 1.5rem;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: -4px;
+    width: 1px;
+    background: rgba(184,146,61,0.35);
+  }
+  .timeline-item:last-child::before { display: none; }
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    width: 11px;
+    height: 11px;
+    border: 2px solid #B8923D;
+    background: #FBFAF5;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  .timeline-item:hover::after {
+    background: #B8923D;
+    transform: scale(1.15);
+  }
+  .timeline-year {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #B8923D;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+
+<body class="paper-texture">
+
+<!-- 상단 미세 라인 -->
+<div class="fixed top-0 left-0 right-0 h-1 bg-navy-900 z-50"></div>
+<div class="fixed top-1 left-0 right-0 h-px bg-gold/60 z-50"></div>
+
+<!-- ======================= NAVIGATION ======================= -->
+<nav class="sticky top-0 z-40 bg-ivory/90 backdrop-blur-md border-b hairline">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="serif-num text-gold text-2xl">H.</span>
+      <span class="font-serif font-bold text-navy-900 text-base sm:text-lg tracking-tight">한상설</span>
+      <span class="hidden sm:inline-block w-px h-4 bg-navy-900/30"></span>
+      <span class="hidden sm:inline meta-label !text-navy-900/60 !text-[10px]">SANGSEOL HAN</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-navy-900/80">
+      <a href="#about" class="hover:text-gold transition">소개</a>
+      <a href="#credentials" class="hover:text-gold transition">경력</a>
+      <a href="#contact" class="hover:text-gold transition">연락처</a>
+    </div>
+    <a href="#contact" class="text-xs sm:text-sm bg-navy-900 text-ivory px-4 py-2 hover:bg-gold transition-all duration-300">
+      연락하기 <span class="serif-num ml-1">→</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ======================= HERO SECTION ======================= -->
+<header id="top" class="relative overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-10 sm:pt-14">
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs">
+      <span class="meta-label">PROFESSIONAL PROFILE</span>
+      <span class="hidden sm:block w-12 h-px bg-navy-900/30"></span>
+      <span class="font-serif text-navy-900/70 italic">Vol. 01 — 2026</span>
+      <span class="hidden md:block w-12 h-px bg-navy-900/30"></span>
+      <span class="text-navy-900/60 font-medium">방위사업 · 공공조달 · AI 컨설팅</span>
+    </div>
+    <div class="mt-4 h-px bg-navy-900/20 origin-left draw-line"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 pt-8 sm:pt-12 pb-16 sm:pb-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+      <!-- LEFT: Title block -->
+      <div class="lg:col-span-7 order-2 lg:order-1">
+
+        <div class="reveal reveal-1">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="serif-num text-gold text-3xl sm:text-4xl">No. 01</span>
+            <span class="w-16 h-px bg-gold"></span>
+            <span class="meta-label">INTRODUCTION</span>
+          </div>
+        </div>
+
+        <h1 class="display-xl text-navy-900 reveal reveal-2 text-[2.4rem] sm:text-5xl lg:text-[4.2rem] xl:text-[4.8rem]">
+          한상설
+          <span class="block mt-2 sm:mt-3 text-[1.2rem] sm:text-2xl lg:text-[1.8rem] font-serif font-medium text-navy-700 tracking-normal leading-snug">
+            <span class="serif-num text-gold mr-2">·</span>방위사업 전문 교수<br class="sm:hidden"/>
+            <span class="hidden sm:inline mx-3 text-gold">/</span>
+            <span class="sm:hidden block mt-1"></span>
+            AI 컨설턴트
+          </span>
+        </h1>
+
+        <div class="mt-10 sm:mt-12 reveal reveal-3 max-w-2xl">
+          <div class="flex items-start gap-3 sm:gap-4">
+            <span class="font-display text-gold text-5xl sm:text-6xl leading-none mt-[-8px]">"</span>
+            <p class="font-serif text-xl sm:text-2xl lg:text-[1.7rem] text-navy-900 leading-snug font-medium">
+              국방 공공조달의 <span class="text-gold">깊은 경륜</span>,<br/>
+              AI와 만나 <span class="underline decoration-gold decoration-2 underline-offset-4">새로운 가치</span>를 창출합니다.
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-7 sm:mt-9 text-base sm:text-[1.05rem] text-navy-900/75 leading-relaxed max-w-xl reveal reveal-4">
+          중장년의 경험을 교육과 AI로 확장해<br class="hidden sm:block"/>
+          배움에서 활용, 직업으로 이어지는 <em class="font-serif text-navy-900 not-italic font-semibold">전환의 여정</em>을 설계합니다.
+        </p>
+
+        <div class="mt-10 sm:mt-12 reveal reveal-5 flex flex-wrap items-center gap-2 sm:gap-3">
+          <span class="inline-flex items-center gap-2 bg-navy-900 text-ivory px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+            <span class="w-1.5 h-1.5 bg-gold rounded-full"></span>
+            방위사업청 원가자문위원
+          </span>
+          <span class="inline-flex items-center gap-2 border border-navy-900/30 text-navy-900 px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+            방위사업교육원 겸임교수
+          </span>
+          <span class="inline-flex items-center gap-2 border border-navy-900/30 text-navy-900 px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+            기상청 외부전문가
+          </span>
+          <span class="inline-flex items-center gap-2 border border-gold text-gold-dark px-4 py-2 text-xs sm:text-sm font-medium tracking-wide">
+            ㈜상상우리 AI컨설턴트
+          </span>
+        </div>
+
+        <div class="mt-12 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 reveal reveal-5">
+          <a href="#credentials" class="group inline-flex items-center justify-center gap-3 bg-navy-900 text-ivory px-7 py-4 font-medium text-sm tracking-wider hover:bg-gold transition-all duration-300">
+            <span>경력 살펴보기</span>
+            <span class="serif-num text-lg group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+          <a href="#contact" class="group inline-flex items-center justify-center gap-3 border border-navy-900 text-navy-900 px-7 py-4 font-medium text-sm tracking-wider hover:bg-navy-900 hover:text-ivory transition-all duration-300">
+            자문 · 강연 문의
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Portrait -->
+      <div class="lg:col-span-5 order-1 lg:order-2 reveal reveal-2">
+        <div class="relative">
+          <div class="hidden lg:flex absolute -left-8 top-8 bottom-8 items-center">
+            <div class="vertical-label text-[10px] text-navy-900/50 font-semibold">SANGSEOL HAN · DEFENSE PROCUREMENT EXPERT · 2026</div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -top-3 -left-3 w-12 h-12 border-t-2 border-l-2 border-gold z-10"></div>
+            <div class="absolute -bottom-3 -right-3 w-12 h-12 border-b-2 border-r-2 border-gold z-10"></div>
+
+            <div class="portrait-frame aspect-[4/5] w-full">
+              <img src="profile.jpg" alt="한상설 방위사업 전문 교수 프로필 사진" class="portrait-img"
+                   onerror="this.style.display='none'; this.nextElementSibling.style.zIndex='5'" />
+
+              <div class="portrait-fallback">
+                <div class="seal mb-5" style="width:88px; height:88px; font-size: 26px; border-color: rgba(212,178,107,0.7); color: #D4B26B;">韓</div>
+                <div class="font-serif text-2xl text-ivory tracking-widest mb-2">한상설</div>
+                <div class="text-xs text-ivory/70 tracking-[0.4em] uppercase">SANGSEOL HAN</div>
+                <div class="mt-6 w-16 h-px bg-gold-light/60"></div>
+                <div class="mt-4 text-[11px] text-ivory/50 tracking-widest">PROFILE PORTRAIT</div>
+              </div>
+            </div>
+
+            <div class="mt-4 flex items-center justify-between text-[10px] sm:text-xs">
+              <span class="meta-label !text-navy-900/70">— 한상설 / Sangseol Han</span>
+              <span class="font-serif italic text-navy-900/60">서울 · 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 하단 매거진식 데이터 라인 -->
+  <div class="border-t hairline">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-6 sm:py-8 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+
+      <div class="reveal reveal-3">
+        <div class="meta-label mb-2">전공 분야</div>
+        <div class="font-serif text-navy-900 text-base sm:text-lg font-semibold leading-tight">방위사업 / 공공조달 계약제도</div>
+      </div>
+
+      <div class="reveal reveal-3">
+        <div class="meta-label mb-2">학위</div>
+        <div class="font-serif text-navy-900 text-base sm:text-lg font-semibold leading-tight">금융법학 석사 · 경영학 학사</div>
+      </div>
+
+      <div class="reveal reveal-4">
+        <div class="meta-label mb-2">현 소속</div>
+        <div class="font-serif text-navy-900 text-base sm:text-lg font-semibold leading-tight">㈜상상우리 / AI · 디지털 컨설팅</div>
+      </div>
+
+      <div class="reveal reveal-4">
+        <div class="meta-label mb-2">공직 경력</div>
+        <div class="font-serif text-navy-900 text-base sm:text-lg font-semibold leading-tight">1994 — 2024 · 30년+</div>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
+<!-- ======================= ABOUT ======================= -->
+<section id="about" class="relative">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 py-20 sm:py-28">
+
+    <div class="text-center mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-3 mb-5">
+        <span class="w-12 h-px bg-gold"></span>
+        <span class="meta-label">PHILOSOPHY</span>
+        <span class="w-12 h-px bg-gold"></span>
+      </div>
+      <h2 class="display-xl text-navy-900 text-3xl sm:text-4xl lg:text-5xl">
+        경험과 기술의 <span class="text-gold">교차점</span>에서
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+
+      <article class="text-center md:text-left">
+        <div class="serif-num text-5xl text-gold mb-4">i.</div>
+        <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">공직 30년의 깊이</h3>
+        <p class="text-sm text-navy-900/75 leading-relaxed">
+          1994년 국방부조달본부에서 시작해 방위사업청까지, 유도무기 · 전투함 · 일반장비 · 대화력사업 등
+          핵심 무기체계 계약 실무를 직접 총괄한 현장 경험을 보유합니다.
+        </p>
+      </article>
+
+      <article class="text-center md:text-left">
+        <div class="serif-num text-5xl text-gold mb-4">ii.</div>
+        <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">제도와 정책의 설계자</h3>
+        <p class="text-sm text-navy-900/75 leading-relaxed">
+          부정당업자 제재 처분 제척기간 도입 등 핵심 계약제도 법령과
+          운영 규정의 제 · 개정을 총괄한 입법 · 정책 실무 경험을 갖추고 있습니다.
+        </p>
+      </article>
+
+      <article class="text-center md:text-left">
+        <div class="serif-num text-5xl text-gold mb-4">iii.</div>
+        <h3 class="font-serif text-xl font-bold text-navy-900 mb-3">AI · 교육으로의 확장</h3>
+        <p class="text-sm text-navy-900/75 leading-relaxed">
+          중장년의 축적된 지식과 경험을 AI · 디지털 도구와 결합해
+          중소기업 · 사회적기업의 전환을 돕는 컨설팅과 교육을 수행합니다.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= CREDENTIALS WITH TABS ======================= -->
+<section id="credentials" class="bg-navy-900 text-ivory relative overflow-hidden">
+
+  <div class="absolute inset-0 opacity-[0.06] pointer-events-none">
+    <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full" style="background: radial-gradient(circle, #B8923D 0%, transparent 70%);"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full" style="background: radial-gradient(circle, #D4B26B 0%, transparent 70%);"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-20 sm:py-28 relative">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12 sm:mb-16 items-end">
+      <div class="md:col-span-8">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="serif-num text-gold-light text-3xl">No. 02</span>
+          <span class="w-16 h-px bg-gold-light"></span>
+          <span class="meta-label !text-gold-light">CREDENTIALS</span>
+        </div>
+        <h2 class="display-xl text-ivory text-3xl sm:text-4xl lg:text-[3.4rem]">
+          핵심 역량과 이력
+        </h2>
+        <p class="mt-4 text-ivory/70 max-w-xl text-sm sm:text-base">
+          학력 · 자격, 방위사업청 핵심 경력, 입법 및 국책사업 성과를 한눈에 확인하세요.
+        </p>
+      </div>
+      <div class="md:col-span-4 flex md:justify-end">
+        <div class="text-xs text-ivory/50 font-serif italic">
+          — 30+ years in Defense Acquisition
+        </div>
+      </div>
+    </div>
+
+    <!-- 탭 버튼 -->
+    <div class="border-b border-ivory/15 mb-10 sm:mb-12 overflow-x-auto" role="tablist">
+      <div class="flex gap-1 sm:gap-2 min-w-max">
+        <button data-tab="tab1" class="tab-btn active px-4 sm:px-6 py-4 text-sm sm:text-base font-medium text-ivory/60 whitespace-nowrap" role="tab">
+          <span class="serif-num text-gold-light mr-2">i.</span>학력 · 전문 자격
+          <span class="underline-deco"></span>
+        </button>
+        <button data-tab="tab2" class="tab-btn px-4 sm:px-6 py-4 text-sm sm:text-base font-medium text-ivory/60 whitespace-nowrap" role="tab">
+          <span class="serif-num text-gold-light mr-2">ii.</span>공공조달 · 방위사업 경력
+          <span class="underline-deco"></span>
+        </button>
+        <button data-tab="tab3" class="tab-btn px-4 sm:px-6 py-4 text-sm sm:text-base font-medium text-ivory/60 whitespace-nowrap" role="tab">
+          <span class="serif-num text-gold-light mr-2">iii.</span>입법 · 국책사업 성과
+          <span class="underline-deco"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== TAB 1 ===== -->
+    <div id="tab1" class="tab-panel active">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+
+        <article class="credential-card p-6 sm:p-8 text-ink">
+          <div class="flex items-start justify-between mb-5">
+            <span class="meta-label">EDUCATION · 학력</span>
+            <span class="serif-num text-gold text-2xl">01</span>
+          </div>
+          <ul class="space-y-4">
+            <li class="pb-4 border-b hairline">
+              <div class="font-serif font-bold text-navy-900 text-base sm:text-lg leading-tight">고려대학교</div>
+              <div class="text-sm text-navy-900/70 mt-1">금융법학 석사 (M.A. in Financial Law)</div>
+            </li>
+            <li>
+              <div class="font-serif font-bold text-navy-900 text-base sm:text-lg leading-tight">한양대학교</div>
+              <div class="text-sm text-navy-900/70 mt-1">경영학 학사 (B.B.A.)</div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="credential-card p-6 sm:p-8 text-ink">
+          <div class="flex items-start justify-between mb-5">
+            <span class="meta-label">CERTIFICATIONS · 전문 자격</span>
+            <span class="serif-num text-gold text-2xl">02</span>
+          </div>
+          <ul class="space-y-4">
+            <li class="pb-4 border-b hairline">
+              <div class="font-serif font-bold text-navy-900 text-base sm:text-lg leading-tight">원가분석사</div>
+              <div class="text-sm text-navy-900/70 mt-1">한국표준협회 (KSA)</div>
+            </li>
+            <li>
+              <div class="font-serif font-bold text-navy-900 text-base sm:text-lg leading-tight">행정사</div>
+              <div class="text-sm text-navy-900/70 mt-1">행정안전부 (MOIS)</div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="credential-card p-6 sm:p-8 text-ink md:col-span-2">
+          <div class="flex items-start justify-between mb-5">
+            <div>
+              <span class="meta-label">EXTERNAL ROLES · 외부 위원 · 겸임 교수</span>
+              <h3 class="font-serif font-bold text-navy-900 text-lg sm:text-xl mt-2 leading-tight">방위사업청 자문 · 심의 · 교육 활동</h3>
+            </div>
+            <span class="serif-num text-gold text-2xl">03</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mt-4">
+            <div class="border-l-2 border-gold pl-4">
+              <div class="text-[11px] meta-label !text-navy-900/50 mb-1">자문 위원</div>
+              <div class="font-serif font-semibold text-navy-900">방위사업청 원가자문위원</div>
+            </div>
+            <div class="border-l-2 border-gold pl-4">
+              <div class="text-[11px] meta-label !text-navy-900/50 mb-1">심의 위원</div>
+              <div class="font-serif font-semibold text-navy-900">원가회계심의위원회 외부위원</div>
+            </div>
+            <div class="border-l-2 border-gold pl-4">
+              <div class="text-[11px] meta-label !text-navy-900/50 mb-1">심의 위원</div>
+              <div class="font-serif font-semibold text-navy-900">계약심의위원회 외부위원</div>
+            </div>
+            <div class="border-l-2 border-gold pl-4">
+              <div class="text-[11px] meta-label !text-navy-900/50 mb-1">교수 활동</div>
+              <div class="font-serif font-semibold text-navy-900">방위사업교육원 겸임교수</div>
+            </div>
+            <div class="border-l-2 border-gold pl-4">
+              <div class="text-[11px] meta-label !text-navy-900/50 mb-1">전문가 활동</div>
+              <div class="font-serif font-semibold text-navy-900">기상청 외부전문가</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ===== TAB 2: 타임라인 ===== -->
+    <div id="tab2" class="tab-panel">
+
+      <div class="mb-10 max-w-3xl">
+        <div class="meta-label !text-gold-light mb-3">— CAREER TIMELINE</div>
+        <h3 class="font-serif text-ivory text-2xl sm:text-3xl font-bold leading-tight">
+          1994 → 2024, 국방 공공조달 30년의 여정
+        </h3>
+        <p class="text-ivory/65 mt-3 text-sm sm:text-base">국방부조달본부에서 시작해 방위사업청 핵심 부서들을 거쳐온 연도별 보직 이력입니다.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
+
+        <!-- 방위사업청 과장급 타임라인 -->
+        <article class="credential-card p-6 sm:p-8 text-ink">
+          <div class="flex items-start justify-between mb-6">
+            <span class="meta-label">DAPA · 방위사업청 과장 · 팀장</span>
+            <span class="serif-num text-gold text-2xl">01</span>
+          </div>
+          <h3 class="font-serif font-bold text-navy-900 text-lg sm:text-xl mb-1 leading-tight">핵심 부서 과장 · 팀장 역임</h3>
+          <p class="text-xs text-navy-900/60 mb-6">주요 무기체계 사업 계약 총괄 (2016 — 2024)</p>
+
+          <div>
+            <div class="timeline-item">
+              <div class="timeline-year">2021 — 2024</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">유도무기총괄팀 과장</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2019 — 2020</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">전투함계약팀 과장</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2018 — 2019</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">일반장비계약팀 과장</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2017 — 2018</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">대화력사업팀 과장</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2016 — 2017</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">행정성과관리팀 팀장</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 정책 / 제도 / 원가 -->
+        <article class="credential-card p-6 sm:p-8 text-ink">
+          <div class="flex items-start justify-between mb-6">
+            <span class="meta-label">POLICY · 정책 · 제도 · 원가</span>
+            <span class="serif-num text-gold text-2xl">02</span>
+          </div>
+          <h3 class="font-serif font-bold text-navy-900 text-lg sm:text-xl mb-1 leading-tight">제도 · 정책 · 원가 담당</h3>
+          <p class="text-xs text-navy-900/60 mb-6">방산정책 · 계약제도 · 원가산정 핵심 담당 (1994 — 2016)</p>
+
+          <div>
+            <div class="timeline-item">
+              <div class="timeline-year">2013 — 2016</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">계약제도심사팀 총괄담당</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2010 — 2012</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">방산정책과 방산진흥총괄담당</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">방위사업청</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">1994 — 2005</div>
+              <div class="font-serif font-bold text-navy-900 text-[15px] leading-snug">장비원가담당</div>
+              <div class="text-xs text-navy-900/55 mt-0.5">국방부조달본부</div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t hairline bg-paper -mx-6 -mb-6 sm:-mx-8 sm:-mb-8 px-6 sm:px-8 py-5">
+            <div class="meta-label !text-navy-900/70 mb-2 !text-[10px]">— 원가 산정 사업 (재임 기간)</div>
+            <div class="text-sm text-navy-900 font-medium leading-relaxed">
+              천마 비호 · KFP · KDX-II · C4I · KCTC 원가산정
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-8 sm:mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-navy-800 border border-gold/30 p-5 text-ivory">
+          <div class="serif-num text-gold-light text-3xl mb-2">∞</div>
+          <div class="text-xs text-ivory/60 mb-1 tracking-widest uppercase">실무 영역</div>
+          <div class="font-serif font-semibold">계약 · 원가 · 제도</div>
+        </div>
+        <div class="bg-navy-800 border border-gold/30 p-5 text-ivory">
+          <div class="serif-num text-gold-light text-3xl mb-2">⊕</div>
+          <div class="text-xs text-ivory/60 mb-1 tracking-widest uppercase">담당 무기체계</div>
+          <div class="font-serif font-semibold">유도무기 · 전투함 · 화력</div>
+        </div>
+        <div class="bg-navy-800 border border-gold/30 p-5 text-ivory">
+          <div class="serif-num text-gold-light text-3xl mb-2">★</div>
+          <div class="text-xs text-ivory/60 mb-1 tracking-widest uppercase">조직 역량</div>
+          <div class="font-serif font-semibold">행정성과 · 전략수립</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 3 ===== -->
+    <div id="tab3" class="tab-panel">
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6">
+
+        <article class="credential-card p-6 sm:p-8 text-ink lg:col-span-2">
+          <div class="flex items-start justify-between mb-5">
+            <span class="meta-label">LEGISLATION · 입법 · 제도화 성과</span>
+            <span class="serif-num text-gold text-2xl">01</span>
+          </div>
+          <h3 class="font-serif font-bold text-navy-900 text-xl sm:text-2xl mb-4 leading-tight">
+            핵심 계약제도 법령 · 운영 규정 제 · 개정 총괄
+          </h3>
+
+          <div class="bg-paper border border-gold/40 p-5 mb-5">
+            <div class="meta-label mb-2">— 대표 입법 성과</div>
+            <p class="font-serif text-navy-900 text-base sm:text-lg leading-snug font-semibold">
+              부정당업자 제재 처분 <span class="text-gold-dark">제척기간 도입</span> 등<br/>
+              방위사업청 계약제도법령 제 · 개정
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 pb-3 border-b hairline">
+              <span class="serif-num text-gold text-base mt-1">·</span>
+              <div class="font-medium text-navy-900 text-[15px] leading-snug">
+                방위사업청 방산지원과 신설 총괄
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="serif-num text-gold text-base mt-1">·</span>
+              <div class="font-medium text-navy-900 text-[15px] leading-snug">
+                방위사업청 전략계획 수립 <span class="serif-num text-gold-dark text-sm ml-1">(2017년)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="credential-card p-6 sm:p-8 text-ink">
+          <div class="flex items-start justify-between mb-5">
+            <span class="meta-label">PROJECTS · 대형 국책사업</span>
+            <span class="serif-num text-gold text-2xl">02</span>
+          </div>
+          <h3 class="font-serif font-bold text-navy-900 text-lg mb-4 leading-tight">전력화 · 계약 · 전략</h3>
+
+          <div class="space-y-4">
+            <div class="border-l-2 border-gold pl-4">
+              <div class="meta-label !text-navy-900/50 !text-[10px] mb-1">전략 수립</div>
+              <div class="font-serif font-semibold text-navy-900 text-[15px] leading-snug">유도무기 발전전략 수립</div>
+            </div>
+
+            <div class="border-l-2 border-gold pl-4">
+              <div class="meta-label !text-navy-900/50 !text-[10px] mb-1">계약 체결</div>
+              <div class="font-serif font-semibold text-navy-900 text-[15px] leading-snug">
+                이지스함<br/>(광개토-III Batch-II) 계약체결
+              </div>
+            </div>
+
+            <div class="border-l-2 border-gold pl-4">
+              <div class="meta-label !text-navy-900/50 !text-[10px] mb-1">전력화</div>
+              <div class="font-serif font-semibold text-navy-900 text-[15px] leading-snug">
+                대포병탐지레이더-II 전력화
+              </div>
+            </div>
+
+            <div class="border-l-2 border-gold pl-4">
+              <div class="meta-label !text-navy-900/50 !text-[10px] mb-1">전력화</div>
+              <div class="font-serif font-semibold text-navy-900 text-[15px] leading-snug">
+                81mm 경량형 박격포<br/>(KMS114) 전력화
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 원가 산정 사업 별도 강조 -->
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-5 gap-3 sm:gap-4">
+        <div class="md:col-span-2 bg-navy-800 border border-gold/30 p-5 sm:p-6 text-ivory flex items-center">
+          <div>
+            <div class="meta-label !text-gold-light mb-2">— COST ANALYSIS</div>
+            <div class="font-serif text-ivory text-base sm:text-lg font-bold leading-tight">원가 산정 주요 사업</div>
+            <div class="text-ivory/60 text-xs mt-1">국방부조달본부 · 장비원가담당 시기</div>
+          </div>
+        </div>
+        <div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+          <div class="bg-navy-700 border border-gold/20 p-4 text-center">
+            <div class="font-serif font-bold text-ivory text-base">천마</div>
+            <div class="text-[10px] text-ivory/50 mt-1 tracking-wider">CHEONMA</div>
+          </div>
+          <div class="bg-navy-700 border border-gold/20 p-4 text-center">
+            <div class="font-serif font-bold text-ivory text-base">비호</div>
+            <div class="text-[10px] text-ivory/50 mt-1 tracking-wider">BIHO</div>
+          </div>
+          <div class="bg-navy-700 border border-gold/20 p-4 text-center">
+            <div class="font-serif font-bold text-ivory text-base">KFP</div>
+            <div class="text-[10px] text-ivory/50 mt-1 tracking-wider">FIGHTER</div>
+          </div>
+          <div class="bg-navy-700 border border-gold/20 p-4 text-center">
+            <div class="font-serif font-bold text-ivory text-base">KDX-II</div>
+            <div class="text-[10px] text-ivory/50 mt-1 tracking-wider">DESTROYER</div>
+          </div>
+          <div class="bg-navy-700 border border-gold/20 p-4 text-center">
+            <div class="font-serif font-bold text-ivory text-base">C4I</div>
+            <div class="text-[10px] text-ivory/50 mt-1 tracking-wider">COMMAND</div>
+          </div>
+          <div class="bg-navy-700 border border-gold/20 p-4 text-center">
+            <div class="font-serif font-bold text-ivory text-base">KCTC</div>
+            <div class="text-[10px] text-ivory/50 mt-1 tracking-wider">TRAINING</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 sm:mt-10 bg-navy-950 border border-gold/40 p-6 sm:p-10 relative overflow-hidden">
+        <div class="absolute top-4 left-4 serif-num text-gold-light/20 text-[6rem] sm:text-[8rem] leading-none pointer-events-none">"</div>
+        <div class="relative z-10 max-w-3xl">
+          <div class="meta-label !text-gold-light mb-3">— THE LEGACY</div>
+          <p class="font-serif text-ivory text-lg sm:text-xl lg:text-2xl leading-snug">
+            법령 · 제도 · 전략 · 사업의 <span class="text-gold-light">전 영역</span>에서<br/>
+            국방 공공조달의 기반을 직접 설계하고 완성한 경험.<br class="hidden sm:block"/>
+            그 경륜이 이제 AI와 만나 새로운 가치를 만들어냅니다.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section id="contact" class="paper-texture relative">
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 lg:px-12 py-20 sm:py-28">
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+      <div class="lg:col-span-5">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="serif-num text-gold text-3xl">No. 03</span>
+          <span class="w-16 h-px bg-gold"></span>
+          <span class="meta-label">CONTACT</span>
+        </div>
+        <h2 class="display-xl text-navy-900 text-3xl sm:text-4xl lg:text-5xl mb-6">
+          연결되어<br/>새로운 <span class="text-gold">가치</span>를<br/>만들어 갑니다.
+        </h2>
+        <p class="text-base text-navy-900/70 leading-relaxed max-w-md">
+          방위사업청 외부위원 / 전문교수 활동, 공공조달 자문, 중소기업 · 사회적기업의 AI · 디지털 전환 교육 및 컨설팅을 의뢰하실 분들의 연락을 환영합니다.
+        </p>
+
+        <div class="mt-10 hidden lg:block">
+          <div class="seal">韓</div>
+          <div class="mt-4 text-xs text-navy-900/50 font-serif italic">— 한상설 (Sangseol Han), 2026</div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="bg-ivory border-2 border-navy-900 p-7 sm:p-10 relative">
+          <div class="absolute top-0 right-0 w-20 h-20 bg-navy-900 flex items-center justify-center">
+            <span class="serif-num text-gold-light text-3xl">✉</span>
+          </div>
+
+          <div class="meta-label mb-2">— BUSINESS CARD</div>
+          <div class="font-serif text-2xl font-bold text-navy-900 mb-1">한상설</div>
+          <div class="text-sm text-navy-900/70 mb-7">방위사업 전문 교수 · AI 컨설턴트</div>
+
+          <div class="border-t hairline mb-6"></div>
+
+          <div class="space-y-5">
+
+            <div class="grid grid-cols-12 gap-4 items-baseline">
+              <div class="col-span-4 sm:col-span-3 meta-label !text-navy-900/60">소속</div>
+              <div class="col-span-8 sm:col-span-9">
+                <div class="font-serif font-semibold text-navy-900 text-base sm:text-lg">주식회사 상상우리</div>
+                <div class="text-xs text-navy-900/60 mt-1">중소기업 · 사회적 기업 AI / 디지털 컨설팅</div>
+              </div>
+            </div>
+
+            <div class="dotted-divide h-px"></div>
+
+            <div class="grid grid-cols-12 gap-4 items-baseline">
+              <div class="col-span-4 sm:col-span-3 meta-label !text-navy-900/60">전화</div>
+              <div class="col-span-8 sm:col-span-9">
+                <a href="tel:01090173326" class="contact-link font-serif font-semibold text-navy-900 text-base sm:text-lg block">
+                  010-9017-3326
+                </a>
+              </div>
+            </div>
+
+            <div class="dotted-divide h-px"></div>
+
+            <div class="grid grid-cols-12 gap-4 items-baseline">
+              <div class="col-span-4 sm:col-span-3 meta-label !text-navy-900/60">이메일</div>
+              <div class="col-span-8 sm:col-span-9">
+                <a href="mailto:antiwar11@naver.com" class="contact-link font-serif font-semibold text-navy-900 text-base sm:text-lg block break-all">
+                  antiwar11@naver.com
+                </a>
+                <div class="text-[11px] text-navy-900/50 mt-1">클릭 시 메일 앱이 실행됩니다</div>
+              </div>
+            </div>
+
+            <div class="dotted-divide h-px"></div>
+
+            <div class="grid grid-cols-12 gap-4 items-baseline">
+              <div class="col-span-4 sm:col-span-3 meta-label !text-navy-900/60">주소</div>
+              <div class="col-span-8 sm:col-span-9">
+                <div class="font-serif font-semibold text-navy-900 text-[15px] sm:text-base leading-snug">
+                  서울시 용산구 후암동 335-10, 301호
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-8 pt-6 border-t hairline flex flex-col sm:flex-row gap-3">
+            <a href="mailto:antiwar11@naver.com" class="flex-1 group inline-flex items-center justify-center gap-2 bg-navy-900 text-ivory px-5 py-3.5 font-medium text-sm tracking-wider hover:bg-gold transition-all duration-300">
+              이메일 보내기
+              <span class="serif-num group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            <a href="tel:01090173326" class="flex-1 group inline-flex items-center justify-center gap-2 border border-navy-900 text-navy-900 px-5 py-3.5 font-medium text-sm tracking-wider hover:bg-navy-900 hover:text-ivory transition-all duration-300">
+              전화 걸기
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="bg-navy-950 text-ivory">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-10 sm:py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+
+      <div class="flex items-center gap-3">
+        <span class="serif-num text-gold text-2xl">H.</span>
+        <div>
+          <div class="font-serif font-bold text-ivory">한상설</div>
+          <div class="text-xs text-ivory/50 tracking-widest mt-0.5">SANGSEOL HAN</div>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-ivory/50 tracking-wider">
+        <div>방위사업 전문 교수 · AI 컨설턴트</div>
+        <div class="mt-1 font-serif italic">© 2026 Sangseol Han. All rights reserved.</div>
+      </div>
+
+      <div class="md:text-right text-xs text-ivory/50">
+        <div class="font-serif italic">"경험은 가장 깊은 자산이며,</div>
+        <div class="font-serif italic">AI는 그것을 확장하는 도구입니다."</div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const targetPanel = document.getElementById(target);
+      if (targetPanel) targetPanel.classList.add('active');
+    });
+  });
+
+  const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -60px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'slideUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('section h2, .credential-card').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
